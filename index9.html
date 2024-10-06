@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыка BALENCI KID и Lil Voxy</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #000;
+        }
+
+        header {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            font-size: 1.5em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header h1 {
+            animation: stretchText 2s ease-out forwards;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 2em;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        @keyframes stretchText {
+            0% {
+                transform: scaleY(1);
+            }
+            100% {
+                transform: scaleY(1.5);
+            }
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Helvetica', sans-serif;
+            letter-spacing: 0.05em;
+            font-size: 2.2em; /* Увеличенный размер заголовка */
+        }
+
+        h2 {
+            font-family: 'Helvetica', sans-serif;
+            letter-spacing: 0.05em;
+            font-size: 2.2em; /* Сделали заголовок ТГК того же размера, что и ТРЕКИ */
+        }
+
+        .song {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: #f0f8ff;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        .song:hover {
+            transform: scale(1.05);
+        }
+
+        .song img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-right: 20px;
+        }
+
+        .song-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex: 1;
+        }
+
+        .song audio {
+            width: 100%;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding-top: 10px; /* Уменьшили отступ сверху */
+        }
+
+        .social-links a {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #444;
+        }
+
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        /* Уменьшено пространство между последней песней и разделом с соцсетями */
+        #music {
+            margin-bottom: 10px; /* Уменьшили отступ снизу */
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const audios = document.querySelectorAll("audio");
+            audios.forEach(audio => {
+                audio.addEventListener("play", function() {
+                    audios.forEach(otherAudio => {
+                        if (otherAudio !== audio) {
+                            otherAudio.pause();
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<header>
+    <h1>ВАССАП, ПАРНИ И ДЕВУШКИ, ВЫ ЗАЛЕТЕЛИ В ГОСТИ К BALENCI KID И Lil Voxy!!!</h1>
+</header>
+
+<section id="music">
+    <h1>ТРЕКИ</h1>
+    <div class="song">
+        <img src="1.jpg" alt="Обложка песни 1">
+        <div class="song-info">
+            <h3>Крошка сохнет</h3>
+            <audio controls>
+                <source src="Крошка сохнет.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает аудио.
+            </audio>
+        </div>
+    </div>
+    <div class="song">
+        <img src="2.jpg" alt="Обложка песни 2">
+        <div class="song-info">
+            <h3>ТЮРЪМЕ</h3>
+            <audio controls>
+                <source src="ТЮРЪМЕ.mp3" type="audio/mpeg">
+                Ваш браузер не поддерживает аудио.
+            </audio>
+        </div>
+    </div>
+</section>
+
+<section id="social">
+    <h2>ТГК</h2>
+    <div class="social-links">
+        <a href="https://t.me/+gDpcFkGzWJ01YzMy" target="_blank">BALENCI KID</a>
+        <a href="https://t.me/LilVoxy" target="_blank">Lil Voxy</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2024 BALENCI KID & Lil Voxy. Все права защищены.</p>
+</footer>
+
+</body>
+</html>
